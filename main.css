@@ -32,14 +32,13 @@ img {
     object-fit: contain;
 }
 
-img.logo {
-	border-radius: 0%;
-}
-
-img.profile-pic {
+img.profile {
 	height: 30%;
 	width: 30%;
 	object-fit: cover;
+}
+
+img.profile-pic {
 	border-radius: 50%;
 }
 
@@ -187,14 +186,14 @@ img.profile-pic {
 }
 
 @media screen and (max-width: 600px) {
-  img.profile-pic {
+  img.profile {
     height: 60%;
     width: 60%;
   }
 }
 
 @media screen and (max-width: 480px) {
-  img.profile-pic {
+  img.profile {
     height: 80%;
     width: 80%;
   }
