@@ -32,10 +32,8 @@ img {
     object-fit: contain;
 }
 
-img.profile-logo {
-	height: inherit;
-	width: inherit;
-	object-fit: cover;
+img.logo {
+	border-radius: 0%;
 }
 
 img.profile-pic {
