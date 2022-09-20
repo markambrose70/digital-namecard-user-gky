@@ -32,6 +32,11 @@ img {
     object-fit: contain;
 }
 
+img.profile-logo {
+	height: 30%;
+	width: 30%;
+}
+
 img.profile-pic {
 	height: 30%;
 	width: 30%;
