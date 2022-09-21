@@ -145,6 +145,10 @@ img.profile-pic {
 	background-color: white;
 }
 
+.bg-color-dark {
+	background-color: #121212;
+}
+
 .text-name {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
