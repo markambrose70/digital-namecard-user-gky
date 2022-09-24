@@ -6,6 +6,39 @@ body {
   justify-content: center;
 }
 
+.scene {
+  width: 100%;
+  height: 100%;
+  perspective: 600px;
+  margin: 0;
+  justify-content: center;
+  background-color: #121212;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card__face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.card__face--back {
+  background: blue;
+  transform: rotateY(180deg);
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
 section {
 	display: block;
 	padding-left: 0.5rem;
@@ -143,10 +176,6 @@ img.profile-pic {
 
 .bg-color-white {
 	background-color: white;
-}
-
-.bg-color-dark {
-	background-color: #121212;
 }
 
 .text-name {
