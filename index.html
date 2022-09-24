@@ -132,6 +132,14 @@
 			<div class="card__face card__face--back">back</div>
 		</div>
 	</div>
+	<script>
+		( function() {
+		  var card = document.querySelector('.scene .card');
+		  card.addEventListener( 'click', function() {
+		    card.classList.toggle('is-flipped');
+		  });
+		})();
+	</script>
 </body>
 
 </html>
