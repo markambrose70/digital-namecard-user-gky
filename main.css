@@ -35,7 +35,7 @@ body {
 }
 
 .card__face--back {
-  background: blue;
+  background: white;
   transform: rotateY(180deg);
 }
 
