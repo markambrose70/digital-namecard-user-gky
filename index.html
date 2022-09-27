@@ -164,11 +164,68 @@
 		</div>
 	</div>
 	<script>
-		( function() {
+		/*( function() {
 		  var card = document.querySelector('.scene .card');
 		  card.addEventListener( 'click', function() {
 		    card.classList.toggle('is-flipped');
 		  });
+		})();*/
+		/* from https://patrickhlauke.github.io/touch/swipe/pointerevents.html */
+		( function() {
+			var start = {};
+			var end = {};
+			var tracking = false;
+			var thresholdTime = 500;
+			var thresholdDistance = 100;
+			var o = document.querySelector('.scene .card')/*document.getElementsByTagName('output')[0]*/;
+			gestureStart = function(e) {
+				o.innerHTML = '';
+				tracking = true;
+				/* Hack - would normally use e.timeStamp but it's whack in Fx/Android */
+				start.t = new Date().getTime();
+				start.x = e.clientX;
+				start.y = e.clientY;
+			};
+			gestureMove = function(e) {
+				if (tracking) {
+					e.preventDefault();
+					end.x = e.clientX;
+					end.y = e.clientY;
+				}
+			}
+			gestureEnd = function(e) {
+				if (tracking) {
+					tracking = false;
+					var now = new Date().getTime();
+					var deltaTime = now - start.t;
+					var deltaX = end.x - start.x;
+					var deltaY = end.y - start.y;
+					/* work out what the movement was */
+					if (deltaTime > thresholdTime) {
+						/* gesture too slow */
+						return;
+					} else {
+						if ((deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
+							window.alert(right swipe)/*o.innerHTML = 'swipe right'*/;
+						} else if ((-deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
+							window.alert(left swipe)/*o.innerHTML = 'swipe left'*/;
+						} else if ((deltaY > thresholdDistance)&&(Math.abs(deltaX) < thresholdDistance)) {
+							window.alert(down swipe)/*o.innerHTML = 'swipe down'*/;
+						} else if ((-deltaY > thresholdDistance)&&(Math.abs(deltaX) < thresholdDistance)) {
+							window.alert(up swipe)/*o.innerHTML = 'swipe up'*/;
+						} else {
+							/*o.innerHTML = ''*/;
+						}
+					}
+				}
+			}
+
+			o.addEventListener('pointerdown', gestureStart, false);
+			o.addEventListener('pointermove', gestureMove, false);
+			o.addEventListener('pointerup', gestureEnd, false);
+			o.addEventListener('pointerleave', gestureEnd, false);
+			o.addEventListener('pointercancel', gestureEnd, false);
+
 		})();
 		
 		/*document.addEventListener('touchstart', handleTouchStart, false);
