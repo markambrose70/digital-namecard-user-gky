@@ -50,6 +50,10 @@ section {
 	height: auto;
 }
 
+no-padding {
+	padding: 0.0rem;
+}
+
 p {
 	margin: 0.25rem !important;
 }
@@ -180,6 +184,10 @@ img.profile-pic {
 
 .bg-color-white {
 	background-color: white;
+}
+
+.text-color-blue {
+	color: #2E75B6;
 }
 
 .text-name {
