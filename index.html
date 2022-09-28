@@ -206,13 +206,13 @@
 						return;
 					} else {
 						if ((deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
-							o.classList.toggle('is-flipped')/*window.alert(right swipe)*//*o.innerHTML = 'swipe right'*/;
+							o.classList.toggle('is-flipped')/*window.alert("right swipe")*//*o.innerHTML = 'swipe right'*/;
 						} else if ((-deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
-							window.alert(left swipe)/*o.innerHTML = 'swipe left'*/;
+							window.alert("left swipe")/*o.innerHTML = 'swipe left'*/;
 						} else if ((deltaY > thresholdDistance)&&(Math.abs(deltaX) < thresholdDistance)) {
-							window.alert(down swipe)/*o.innerHTML = 'swipe down'*/;
+							window.alert("down swipe")/*o.innerHTML = 'swipe down'*/;
 						} else if ((-deltaY > thresholdDistance)&&(Math.abs(deltaX) < thresholdDistance)) {
-							window.alert(up swipe)/*o.innerHTML = 'swipe up'*/;
+							window.alert("up swipe")/*o.innerHTML = 'swipe up'*/;
 						} else {
 							/*o.innerHTML = ''*/;
 						}
