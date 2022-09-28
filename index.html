@@ -206,7 +206,7 @@
 						return;
 					} else {
 						if ((deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
-							window.alert(right swipe)/*o.innerHTML = 'swipe right'*/;
+							o.classList.toggle('is-flipped')/*window.alert(right swipe)*//*o.innerHTML = 'swipe right'*/;
 						} else if ((-deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
 							window.alert(left swipe)/*o.innerHTML = 'swipe left'*/;
 						} else if ((deltaY > thresholdDistance)&&(Math.abs(deltaX) < thresholdDistance)) {
