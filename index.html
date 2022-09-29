@@ -162,6 +162,9 @@
 				</section>
 			</div>
 		</div>
+		<div>
+			<p id="screen-log"></p>
+		</div>
 	</div>
 	<script>
 		/*( function() {
@@ -172,6 +175,7 @@
 		})();*/
 		/* from https://patrickhlauke.github.io/touch/swipe/pointerevents.html */
 		( function() {
+										let screenLog = document.querySelector('#screen-log');
 			var start = {};
 			var end = {};
 			var tracking = false;
@@ -199,7 +203,7 @@
 					var now = new Date().getTime();
 					var deltaTime = now - start.t;
 					var deltaX = end.x - start.x;
-					var deltaY = end.y - start.y;
+					var deltaY = end.y - start.y;		     screenLog.innerText = `Client dX/dY/dT: ${deltaX}, ${deltaY}, ${deltaTime}`;
 					/* work out what the movement was */
 					if (deltaTime > thresholdTime) {
 						/* gesture too slow */
