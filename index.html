@@ -215,13 +215,13 @@
 						return;
 					} else {
 						if ((deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
-							if (!o.classList.contains('is-flipped')) { btn.style.backgroundColor = 'salmon'/*o.classList.toggle('is-flipped')*//*o.innerHTML = 'swipe right'*/; }
+							if (btn.style.backgroundColor = '#219653') { btn.style.backgroundColor = 'salmon' /*(!o.classList.contains('is-flipped')) { o.classList.toggle('is-flipped')*//*o.innerHTML = 'swipe right'*/; }
 						} else if ((-deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
-							if (o.classList.contains('is-flipped')) { btn.style.backgroundColor = 'green'/*o.classList.toggle('is-flipped')*//*o.innerHTML = 'swipe left'*/; }
+							if (btn.style.backgroundColor = 'salmon') { btn.style.backgroundColor = '#219653'/*(o.classList.contains('is-flipped')) { o.classList.toggle('is-flipped')*//*o.innerHTML = 'swipe left'*/; }
 						} else if ((deltaY > thresholdDistance)&&(Math.abs(deltaX) < thresholdDistance)) {
 							//o.innerHTML = 'swipe down';
 						} else if ((-deltaY > thresholdDistance)&&(Math.abs(deltaX) < thresholdDistance)) {
-							//*o.innerHTML = 'swipe up';
+							//o.innerHTML = 'swipe up';
 						} else {
 							//o.innerHTML = '';
 						}
