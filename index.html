@@ -126,6 +126,13 @@
 							</div>
 							<div class="col"></div>
 						</div>
+						<div> <!-- temporary div for testing -->
+							<div class="col"></div>
+							<div class="col is-5">
+								<p id="screen-log"></p>
+							</div>
+							<div class="col"></div>
+						</div>
 					</div>
 				</section>
 			</div>
@@ -162,9 +169,6 @@
 				</section>
 			</div>
 		</div>
-		<div>
-			<p id="screen-log"></p>
-		</div>
 	</div>
 	<script>
 		/*( function() {
@@ -176,6 +180,7 @@
 		/* from https://patrickhlauke.github.io/touch/swipe/pointerevents.html */
 		( function() {
 										let screenLog = document.querySelector('#screen-log');
+										const btn = document.querySelector('.button');
 			var start = {};
 			var end = {};
 			var tracking = false;
@@ -210,9 +215,9 @@
 						return;
 					} else {
 						if ((deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
-							if (!o.classList.contains('is-flipped')) { o.classList.toggle('is-flipped')/*o.innerHTML = 'swipe right'*/; }
+							if (!o.classList.contains('is-flipped')) { btn.style.backgroundColor = 'salmon'/*o.classList.toggle('is-flipped')*//*o.innerHTML = 'swipe right'*/; }
 						} else if ((-deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
-							if (o.classList.contains('is-flipped')) { o.classList.toggle('is-flipped')/*o.innerHTML = 'swipe left'*/; }
+							if (o.classList.contains('is-flipped')) { btn.style.backgroundColor = 'green'/*o.classList.toggle('is-flipped')*//*o.innerHTML = 'swipe left'*/; }
 						} else if ((deltaY > thresholdDistance)&&(Math.abs(deltaX) < thresholdDistance)) {
 							//o.innerHTML = 'swipe down';
 						} else if ((-deltaY > thresholdDistance)&&(Math.abs(deltaX) < thresholdDistance)) {
