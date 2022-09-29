@@ -138,7 +138,7 @@
 								<img class="profile align-left" src="assets/sidebar-hand.png" alt="Person using mobile phone">
 							</div>
 							<div class="col">
-								<p class="text-title-company text-align-left"><span class="text-color-blue"><strong>JOBSteps</strong> is a powerful mobile tool with a <strong>fresh approach</strong> to paperless recording of manual tasks, improving <strong>accuracy, efficiency and accountability.</strong></span></p>
+								<p class="text-title-company text-align-left"><span class="text-color-blue"><strong>JOBSteps</strong> is a powerful mobile tool with a <strong>fresh approach</strong> to paperless recording for manual tasks, improving <strong>accuracy, efficiency and accountability.</strong></span></p>
 							</div>
 						</div>
 					</div>
@@ -210,13 +210,13 @@
 						return;
 					} else {
 						if ((deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
-							o.classList.toggle('is-flipped')/*window.alert("right swipe")*//*o.innerHTML = 'swipe right'*/;
+							if (!o.classList.contains('is-flipped')) { o.classList.toggle('is-flipped')/*o.innerHTML = 'swipe right'*/; }
 						} else if ((-deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
-							window.alert("left swipe")/*o.innerHTML = 'swipe left'*/;
+							if (o.classList.contains('is-flipped')) { o.classList.toggle('is-flipped')/*o.innerHTML = 'swipe left'*/; }
 						} else if ((deltaY > thresholdDistance)&&(Math.abs(deltaX) < thresholdDistance)) {
-							window.alert("down swipe")/*o.innerHTML = 'swipe down'*/;
+							//o.innerHTML = 'swipe down';
 						} else if ((-deltaY > thresholdDistance)&&(Math.abs(deltaX) < thresholdDistance)) {
-							window.alert("up swipe")/*o.innerHTML = 'swipe up'*/;
+							//*o.innerHTML = 'swipe up';
 						} else {
 							//o.innerHTML = '';
 						}
