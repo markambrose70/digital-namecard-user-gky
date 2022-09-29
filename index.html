@@ -138,7 +138,7 @@
 								<img class="profile align-left" src="assets/sidebar-hand.png" alt="Person using mobile phone">
 							</div>
 							<div class="col">
-								<p class="text-title-company text-align-left"><span class="text-color-blue"><strong>JOBSteps</strong> is a powerful mobile tool with a <strong>fresh approach</strong> to the paperless recording process of manual tasks, improving <strong>accuracy, efficiency and accountability.</strong></span></p>
+								<p class="text-title-company text-align-left"><span class="text-color-blue"><strong>JOBSteps</strong> is a powerful mobile tool with a <strong>fresh approach</strong> to paperless recording of manual tasks, improving <strong>accuracy, efficiency and accountability.</strong></span></p>
 							</div>
 						</div>
 					</div>
@@ -181,7 +181,7 @@
 			var tracking = false;
 			var thresholdTime = 1000;
 			var thresholdDistance = 100;
-			var o = document.querySelector('.card')/*document.getElementsByTagName('output')[0]*/;
+			var o = document.querySelector('.scene')/*document.getElementsByTagName('output')[0]*/;
 			gestureStart = function(e) {
 				/*o.innerHTML = '';*/
 				tracking = true;
@@ -206,7 +206,7 @@
 					var deltaY = end.y - start.y;		     screenLog.innerText = `Client startX/endX/dX/dY/dT: ${start.x}, ${end.x}, ${deltaX}, ${deltaY}, ${deltaTime}`;
 					/* work out what the movement was */
 					if (deltaTime > thresholdTime) {
-						/* gesture too slow */
+						// gesture too slow
 						return;
 					} else {
 						if ((deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
@@ -218,7 +218,7 @@
 						} else if ((-deltaY > thresholdDistance)&&(Math.abs(deltaX) < thresholdDistance)) {
 							window.alert("up swipe")/*o.innerHTML = 'swipe up'*/;
 						} else {
-							/*o.innerHTML = ''*/;
+							//o.innerHTML = '';
 						}
 					}
 				}
