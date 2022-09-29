@@ -138,7 +138,7 @@
 								<img class="profile align-left" src="assets/sidebar-hand.png" alt="Person using mobile phone">
 							</div>
 							<div class="col">
-								<p class="text-title-company text-align-left"><span class="text-color-blue"><strong>JOBSteps</strong> is a powerful mobile tool that takes a <strong>fresh approach</strong> to the paperless experience of recording manual tasks, improving <strong>accuracy, efficiency and accountability.</strong></span></p>
+								<p class="text-title-company text-align-left"><span class="text-color-blue"><strong>JOBSteps</strong> is a powerful mobile tool with a <strong>fresh approach</strong> to paperless recording of manual tasks, improving <strong>accuracy, efficiency and accountability.</strong></span></p>
 							</div>
 						</div>
 					</div>
@@ -203,7 +203,7 @@
 					var now = new Date().getTime();
 					var deltaTime = now - start.t;
 					var deltaX = end.x - start.x;
-					var deltaY = end.y - start.y;		     screenLog.innerText = `Client dX/dY/dT: ${deltaX}, ${deltaY}, ${deltaTime}`;
+					var deltaY = end.y - start.y;		     screenLog.innerText = `Client startX/endX/dX/dY/dT: ${start.x}, ${end.x}, ${deltaX}, ${deltaY}, ${deltaTime}`;
 					/* work out what the movement was */
 					if (deltaTime > thresholdTime) {
 						/* gesture too slow */
