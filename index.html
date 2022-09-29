@@ -176,12 +176,12 @@
 			var end = {};
 			var tracking = false;
 			var thresholdTime = 500;
-			var thresholdDistance = screen.width > 480 ? 100 : 10; window.alert(thresholdDistance);
-			var o = document.querySelector('.scene .card')/*document.getElementsByTagName('output')[0]*/;
+			var thresholdDistance = 100;
+			var o = document.querySelector('.card')/*document.getElementsByTagName('output')[0]*/;
 			gestureStart = function(e) {
 				/*o.innerHTML = '';*/
 				tracking = true;
-				/* Hack - would normally use e.timeStamp but it's whack in Fx/Android */ window.alert(e.timeStamp);
+				/* Hack - would normally use e.timeStamp but it's whack in Fx/Android */
 				start.t = new Date().getTime();
 				start.x = e.clientX;
 				start.y = e.clientY;
@@ -195,12 +195,12 @@
 			}
 			gestureEnd = function(e) {
 				if (tracking) {
-					tracking = false; 				window.alert(e.timeStamp);
+					tracking = false;
 					var now = new Date().getTime();
 					var deltaTime = now - start.t;
 					var deltaX = end.x - start.x;
 					var deltaY = end.y - start.y;
-					/* work out what the movement was */ window.alert(deltaX);
+					/* work out what the movement was */
 					if (deltaTime > thresholdTime) {
 						/* gesture too slow */
 						return;
