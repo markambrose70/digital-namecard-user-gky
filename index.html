@@ -10,7 +10,7 @@
 
 <body>
 	<div class="scene">
-		<div class="card card--slide">
+		<div class="card card--slide" onclick="event.stopPropagation()">
 			<div class="card__face card__face--front">
 				<section class="bg-color-grey banner">
 					<div class="container">
@@ -126,7 +126,12 @@
 							</div>
 							<div class="col"></div>
 						</div>
-						<div class="row"> <!-- temporary div for testing -->
+					</div>
+				</section>
+				
+				<section class="bg-color-grey footer">
+					<div class="container">
+						<div class="row">
 							<div class="col"></div>
 							<div class="col is-5">
 								<p id="screen-log"></p>
