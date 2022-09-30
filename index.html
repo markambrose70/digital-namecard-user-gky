@@ -11,7 +11,7 @@
 <body>
 	<div class="scene">
 		<div class="card card--slide">
-			<div class="card__face card__face--front blocking">
+			<div class="card__face card__face--front">
 				<section class="bg-color-grey banner">
 					<div class="container">
 						<div class="row">
@@ -205,6 +205,7 @@
 			var thresholdTime = 1000;
 			var thresholdDistance = screen.width > 480 ? 100 : 10;
 			var o = document.querySelector('.card')/*document.getElementsByTagName('output')[0]*/;
+			var c = document.querySelector('.card__face--front');
 			gestureStart = function(e) {
 				/*o.innerHTML = '';*/
 				tracking = true;
@@ -226,16 +227,16 @@
 					var now = new Date().getTime();
 					var deltaTime = now - start.t;
 					var deltaX = end.x - start.x;
-					var deltaY = end.y - start.y;		     screenLog.innerText = `Client dX: ${Math.round(deltaX)}`;
+					var deltaY = end.y - start.y;		     screenLog.innerText = `Client dX/dY/dT: ${Math.round(deltaX)}/${Math.round(deltaY)}/${Math.round(deltaTime)}`;
 					/* work out what the movement was */
 					if (deltaTime > thresholdTime) {
 						// gesture too slow
 						return;
 					} else {
 						if ((deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
-							/*btn.style.backgroundColor = 'salmon';*/ if (o.classList.contains('is-flipped')) { o.classList.toggle('is-flipped'); }/*o.innerHTML = 'swipe right';*/
+							/*btn.style.backgroundColor = 'salmon';*/ if (o.classList.contains('is-flipped')) { o.classList.toggle('is-flipped'); c.classList.toggle('blocking'); }/*o.innerHTML = 'swipe right';*/
 						} else if ((-deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
-							/*btn.style.backgroundColor = '#219653';*/ if (!o.classList.contains('is-flipped')) { o.classList.toggle('is-flipped'); }/*o.innerHTML = 'swipe left';*/
+							/*btn.style.backgroundColor = '#219653';*/ if (!o.classList.contains('is-flipped')) { o.classList.toggle('is-flipped'); c.classList.toggle('blocking'); }/*o.innerHTML = 'swipe left';*/
 						} else if ((deltaY > thresholdDistance)&&(Math.abs(deltaX) < thresholdDistance)) {
 							//o.innerHTML = 'swipe down';
 						} else if ((-deltaY > thresholdDistance)&&(Math.abs(deltaX) < thresholdDistance)) {
