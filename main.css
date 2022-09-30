@@ -258,6 +258,10 @@ ul {
 	font-weight: 300;
 }
 
+.blocking {
+	pointer-events: none;
+}
+
 @media screen and (max-width: 600px) {
   img.profile {
     height: 60%;
