@@ -67,7 +67,7 @@ ul {
 
 .card--slide {
     transform-origin: center right;
-	touch-action: pan-x;
+	touch-action: none;
 }
 
 .card {
