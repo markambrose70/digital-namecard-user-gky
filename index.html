@@ -198,7 +198,7 @@
 		/* from https://patrickhlauke.github.io/touch/swipe/pointerevents.html */
 		( function() {
 										let screenLog = document.querySelector('#screen-log');
-										const btn = document.querySelector('.button');
+										//const btn = document.querySelector('.button');
 			var start = {};
 			var end = {};
 			var tracking = false;
@@ -233,9 +233,9 @@
 						return;
 					} else {
 						if ((deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
-							btn.style.backgroundColor = 'salmon';/* if (!o.classList.contains('is-flipped')) { o.classList.toggle('is-flipped')*//*o.innerHTML = 'swipe right'; }*/
+							/*btn.style.backgroundColor = 'salmon';*/ if (!o.classList.contains('is-flipped')) { o.classList.toggle('is-flipped'); }/*o.innerHTML = 'swipe right';*/
 						} else if ((-deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
-							btn.style.backgroundColor = '#219653';/* if (o.classList.contains('is-flipped')) { o.classList.toggle('is-flipped')*//*o.innerHTML = 'swipe left'; }*/
+							/*btn.style.backgroundColor = '#219653';*/ if (o.classList.contains('is-flipped')) { o.classList.toggle('is-flipped'); }/*o.innerHTML = 'swipe left';*/
 						} else if ((deltaY > thresholdDistance)&&(Math.abs(deltaX) < thresholdDistance)) {
 							//o.innerHTML = 'swipe down';
 						} else if ((-deltaY > thresholdDistance)&&(Math.abs(deltaX) < thresholdDistance)) {
