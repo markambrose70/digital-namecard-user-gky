@@ -143,10 +143,10 @@
 			</div>
 			
 			<div class="card__face card__face--back">
-				<section class="bg-color-grey banner no-padding">
+				<section class="bg-color-grey banner-25 no-padding">
 					<div class="container">
 						<div class="row">
-							<div class="col is-3">
+							<div class="col is-2-5">
 								<img class="profile align-left" src="assets/sidebar-hand.png" alt="Person using mobile phone">
 							</div>
 							<div class="col">
@@ -156,7 +156,7 @@
 					</div>
 				</section>
 				
-				<section class="bg-color-white banner no-padding">
+				<section class="bg-color-white banner-25 no-padding">
 					<div class="container">
 						<div class="row">
 							<div class="col">
@@ -166,7 +166,24 @@
   									<li class="text-detail"><span class="text-color-blue">Boost productivity</span> and make <span class="text-color-blue">informed business decisions</span> with this new information.</li>
 								</ul> 
 							</div>
-							<div class="col is-3">
+							<div class="col is-2-5">
+								<img class="profile align-right" src="assets/sidebar-presentation.png" alt="Person using mobile phone">
+							</div>
+						</div>
+					</div>
+				</section>
+				
+				<section class="bg-color-white banner-45 no-padding">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								 <ul>
+  									<li class="text-detail"><span class="text-color-blue">Minimize mistakes</span> with custom constraints on all data types during the data capture process.</li>
+  									<li class="text-detail">Data processing in <span class="text-color-blue">real-time</span> reveals <span class="text-color-blue">hidden information / work attributes.</span></li>
+  									<li class="text-detail"><span class="text-color-blue">Boost productivity</span> and make <span class="text-color-blue">informed business decisions</span> with this new information.</li>
+								</ul> 
+							</div>
+							<div class="col is-2-5">
 								<img class="profile align-right" src="assets/sidebar-presentation.png" alt="Person using mobile phone">
 							</div>
 						</div>
@@ -234,9 +251,9 @@
 						return;
 					} else {
 						if ((deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
-							/*btn.style.backgroundColor = 'salmon';*/ if (o.classList.contains('is-flipped')) { o.classList.toggle('is-flipped'); c.classList.toggle('blocking'); }/*o.innerHTML = 'swipe right';*/
+							/*btn.style.backgroundColor = 'salmon';*/ if (o.classList.contains('is-flipped')) { o.classList.toggle('is-flipped'); c.classList.toggle('no-events'); }/*o.innerHTML = 'swipe right';*/
 						} else if ((-deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
-							/*btn.style.backgroundColor = '#219653';*/ if (!o.classList.contains('is-flipped')) { o.classList.toggle('is-flipped'); c.classList.toggle('blocking'); }/*o.innerHTML = 'swipe left';*/
+							/*btn.style.backgroundColor = '#219653';*/ if (!o.classList.contains('is-flipped')) { o.classList.toggle('is-flipped'); c.classList.toggle('no-events'); }/*o.innerHTML = 'swipe left';*/
 						} else if ((deltaY > thresholdDistance)&&(Math.abs(deltaX) < thresholdDistance)) {
 							//o.innerHTML = 'swipe down';
 						} else if ((-deltaY > thresholdDistance)&&(Math.abs(deltaX) < thresholdDistance)) {
