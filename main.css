@@ -138,6 +138,11 @@ ul {
 	width: 20%;
 }
 
+.col.is-2-5 {
+	flex: none;
+	width: 25%;
+}
+
 .col.is-3 {
 	flex: none;
 	width: 30%;
@@ -238,11 +243,19 @@ ul {
 }
 
 .bottom {
-	height: 15%;
+	height: 18%;
 }
 
 .footer {
-	height: 8%;
+	height: 5%;
+}
+
+.banner-25 {
+	height: 25%;
+}
+
+.banner-45 {
+	height: 45%;
 }
 
 .button {
@@ -258,7 +271,7 @@ ul {
 	font-weight: 300;
 }
 
-.blocking {
+.no-events {
 	pointer-events: none;
 }
 
