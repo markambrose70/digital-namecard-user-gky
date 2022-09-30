@@ -237,7 +237,11 @@ ul {
 }
 
 .bottom {
-	height: 23%;
+	height: 15%;
+}
+
+.footer {
+	height: 8%;
 }
 
 .button {
