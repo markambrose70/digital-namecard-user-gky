@@ -42,6 +42,11 @@ img.profile-pic {
 	border-radius: 50%;
 }
 
+img.indicator {
+	height: 10%;
+	width: 10%;
+}
+
 img.align-left {
 	margin-left: unset;
 }
