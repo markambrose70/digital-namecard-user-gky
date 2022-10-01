@@ -161,9 +161,9 @@
 						<div class="row">
 							<div class="col">
 								 <ul>
-  									<li class="text-detail"><span class="text-color-blue">Minimize mistakes</span> with custom constraints on all data types during the data capture process.</li>
-  									<li class="text-detail">Data processing in <span class="text-color-blue">real-time</span> reveals <span class="text-color-blue">hidden information / work attributes.</span></li>
-  									<li class="text-detail"><span class="text-color-blue">Boost productivity</span> and make <span class="text-color-blue">informed business decisions</span> with this new information.</li>
+  									<li class="text-detail"><span class="text-color-blue">Minimize mistakes</span> with custom constraints on all data types.</li>
+  									<li class="text-detail">Process data in <span class="text-color-blue">real-time</span> to reveal <span class="text-color-blue">hidden information.</span></li>
+  									<li class="text-detail"><span class="text-color-blue">Boost productivity</span> and make <span class="text-color-blue">informed business decisions</span> with new information.</li>
 								</ul> 
 							</div>
 							<div class="col is-2-5 no-padding">
@@ -236,7 +236,7 @@
 						<div class="row">
 							<div class="col"></div>
 							<div class="col is-5">
-								<p id="screen-log"></p>
+								<img class="profile" src="assets/page_indicator.png" alt="page">
 							</div>
 							<div class="col"></div>
 						</div>
@@ -256,7 +256,6 @@
 		/* from https://patrickhlauke.github.io/touch/swipe/pointerevents.html */
 		( function() {
 										let screenLog = document.querySelector('#screen-log');
-										//const btn = document.querySelector('.button');
 			var start = {};
 			var end = {};
 			var tracking = false;
@@ -292,16 +291,16 @@
 						return;
 					} else {
 						if ((deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
-							/*btn.style.backgroundColor = 'salmon';*/ if (o.classList.contains('is-flipped')) { o.classList.toggle('is-flipped'); c.classList.toggle('no-events'); }/*o.innerHTML = 'swipe right';*/
+							if (o.classList.contains('is-flipped')) { o.classList.toggle('is-flipped'); c.classList.toggle('no-events'); }/*o.innerHTML = 'swipe right';*/
 						} else if ((-deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
-							/*btn.style.backgroundColor = '#219653';*/ if (!o.classList.contains('is-flipped')) { o.classList.toggle('is-flipped'); c.classList.toggle('no-events'); }/*o.innerHTML = 'swipe left';*/
-						} else if ((deltaY > thresholdDistance)&&(Math.abs(deltaX) < thresholdDistance)) {
+							if (!o.classList.contains('is-flipped')) { o.classList.toggle('is-flipped'); c.classList.toggle('no-events'); }/*o.innerHTML = 'swipe left';*/
+						}/* else if ((deltaY > thresholdDistance)&&(Math.abs(deltaX) < thresholdDistance)) {
 							//o.innerHTML = 'swipe down';
 						} else if ((-deltaY > thresholdDistance)&&(Math.abs(deltaX) < thresholdDistance)) {
 							//o.innerHTML = 'swipe up';
 						} else {
 							//o.innerHTML = '';
-						}
+						}*/
 					}
 				}
 			}
