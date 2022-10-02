@@ -43,8 +43,8 @@ img.profile-pic {
 }
 
 img.indicator {
-	height: 50%;
-	width: 50%;
+	height: 15%;
+	width: 15%;
 }
 
 img.align-left {
@@ -213,7 +213,7 @@ ul {
 }
 
 .bg-color-beige {
-	background-color: #F5F5DC;
+	background-color: #FFFFE9;
 }
 
 .text-color-blue {
