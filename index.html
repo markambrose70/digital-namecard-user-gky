@@ -222,7 +222,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col is-5">
-								<p class="text-detail text-align-center">Digital transformation</p>
+								<p class="text-detail text-align-center">ISO9001 guidelines</p>
 							</div>
 							<div class="col">
 								<p class="text-detail text-align-center">Knowledge extraction</p>
@@ -284,7 +284,15 @@
 					var now = new Date().getTime();
 					var deltaTime = now - start.t;
 					var deltaX = end.x - start.x;
-					var deltaY = end.y - start.y;		     screenLog.innerText = `Client dX/dY/dT: ${Math.round(deltaX)}/${Math.round(deltaY)}/${Math.round(deltaTime)}`;
+					var deltaY = end.y - start.y;		     
+					e.preventDefault();
+																var endest.x = e.clientX;
+																var endest.y = e.clientY;
+																var dX = endest.x - start.x;
+																var dY = endest.y - start.y;
+																var diffX = dX - deltaX;
+																var diffY = dY - deltaY;
+																screenLog.innerText = `Client dX/dY/dT: ${Math.round(diffX)}/${Math.round(diffY)}/${Math.round(deltaTime)}`;
 					/* work out what the movement was */
 					if (deltaTime > thresholdTime) {
 						// gesture too slow
