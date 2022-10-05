@@ -47,6 +47,11 @@ img.indicator {
 	width: 25%;
 }
 
+img.benefits {
+	height: 50px;
+	width: 50px;
+}
+
 img.align-left {
 	margin-left: unset;
 }
