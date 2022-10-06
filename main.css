@@ -221,7 +221,7 @@ p.big {
 }
 
 .text-color-blue {
-	color: #2E75B6;
+	color: #2E75B6 !important;
 }
 
 .text-name {
