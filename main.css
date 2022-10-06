@@ -60,10 +60,11 @@ img.align-right {
 	margin-right: unset;
 }
 
-ul {
+ol {
   display: flex;
   flex-direction: column;
   gap: 0.625rem;
+	list-style-type: decimal-leading-zero;
 }
 
 p.big {
@@ -289,7 +290,7 @@ p.big {
 }
 
 .outline {
-	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 10px;
 }
 
 .button {
