@@ -310,14 +310,12 @@ p.big {
 	border: 1px solid white;
 	border-top-left-radius: 70px;
   	border-bottom-left-radius: 70px;
-	height: 50%;
 }
 
 .rounded-right {
 	/*border: 2px solid white;*/
 	border-top-right-radius: 70px;
   	border-bottom-right-radius: 70px;
-	height: 50%;
 }
 
 .no-events {
