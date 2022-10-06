@@ -64,7 +64,7 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 0.625rem;
-	list-style-type: circle;
+	list-style-type: square;
 }
 
 p.big {
@@ -198,11 +198,11 @@ p.big {
 }
 
 .banner {
-	height: 27%;
+	height: 30%;
 }
 
 .primary-info {
-	height: 13%;
+	height: 15%;
 }
 
 .secondary-info {
@@ -261,7 +261,7 @@ p.big {
 }
 
 .bottom {
-	height: 23%;
+	height: 18%;
 }
 
 .footer {
@@ -310,12 +310,14 @@ p.big {
 	border: 1px solid white;
 	border-top-left-radius: 70px;
   	border-bottom-left-radius: 70px;
+	height: 100%;
 }
 
 .rounded-right {
 	/*border: 2px solid white;*/
 	border-top-right-radius: 70px;
   	border-bottom-right-radius: 70px;
+	height: 100%;
 }
 
 .no-events {
