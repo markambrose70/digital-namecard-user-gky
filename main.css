@@ -294,7 +294,7 @@ p.big {
 
 .button {
 	background-color: #219653;
-	height: 48px;
+	height: 100%;
 	padding-left: 24px;
 	padding-right: 24px;
 	text-align: center;
@@ -306,13 +306,13 @@ p.big {
 }
 
 .rounded-left {
-	border: 2px solid white;
+	border: 1px solid white;
 	border-top-left-radius: 70px;
   	border-bottom-left-radius: 70px;
 }
 
 .rounded-right {
-	border: 2px solid white;
+	/*border: 2px solid white;*/
 	border-top-right-radius: 70px;
   	border-bottom-right-radius: 70px;
 }
