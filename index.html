@@ -120,7 +120,12 @@
 							<div class="col is-5">
 								<div class="button">
 									<a href="user.vcf">
-										<p class="button">Download</p>
+										<p class="button">Share</p>
+									</a>
+								</div>
+								<div class="button">
+									<a href="user.vcf">
+										<p class="button">Save</p>
 									</a>
 								</div>
 							</div>
@@ -136,7 +141,7 @@
 							<div class="col is-5">
 								<img class="indicator" src="assets/front_page_indicator.png" alt="page 1/2">
 							</div>
-							<div class="col"><p id="screen-log"></p></div>
+							<div class="col"><!--<p id="screen-log"></p>--></div>
 						</div>
 					</div>
 				</section>
@@ -257,7 +262,7 @@
 		})();*/
 		/* from https://patrickhlauke.github.io/touch/swipe/pointerevents.html */
 		( function() {
-										let screenLog = document.querySelector('#screen-log');
+										/*let screenLog = document.querySelector('#screen-log');*/
 			var start = {};
 			var end = {};
 			var tracking = false;
@@ -286,7 +291,7 @@
 					var now = new Date().getTime();
 					var deltaTime = now - start.t;
 					var deltaX = end.x - start.x;
-					var deltaY = end.y - start.y;		     screenLog.innerText = `Client dX/dY/dT: ${Math.round(deltaX)}/${Math.round(deltaY)}/${Math.round(deltaTime)}`;
+					var deltaY = end.y - start.y;		     /*screenLog.innerText = `Client dX/dY/dT: ${Math.round(deltaX)}/${Math.round(deltaY)}/${Math.round(deltaTime)}`;*/
 					/* work out what the movement was */
 					if (deltaTime > thresholdTime) {
 						// gesture too slow
