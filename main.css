@@ -273,15 +273,19 @@ p.big {
 }
 
 .banner-medium {
-	height: 15%;
+	height: 20%;
 }
 
 .banner-small {
-	height: 12%;
+	height: 10%;
+}
+
+.banner-smaller {
+	height: 8%;
 }
 
 .banner-smallest {
-	height: 8%;
+	height: 7%;
 }
 
 .button {
