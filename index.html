@@ -300,9 +300,9 @@
 						return;
 					} else {
 						if ((deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
-							if (o.classList.contains('is-flipped')) { screenLog.innerText = `made it to 1`; o.classList.toggle('is-flipped'); c.classList.toggle('no-events'); }/*o.innerHTML = 'swipe right';*/
+							if (o.classList.contains('is-flipped')) { /*screenLog.innerText = `made it to 1`;*/ o.classList.toggle('is-flipped'); c.classList.toggle('no-events'); }/*o.innerHTML = 'swipe right';*/
 						} else if ((-deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
-							if (!o.classList.contains('is-flipped')) { screenLog.innerText = `made it to 2`; o.classList.toggle('is-flipped'); c.classList.toggle('no-events'); }/*o.innerHTML = 'swipe left';*/
+							if (!o.classList.contains('is-flipped')) { /*screenLog.innerText = `made it to 2`;*/ o.classList.toggle('is-flipped'); c.classList.toggle('no-events'); }/*o.innerHTML = 'swipe left';*/
 						}/* else if ((deltaY > thresholdDistance)&&(Math.abs(deltaX) < thresholdDistance)) {
 							//o.innerHTML = 'swipe down';
 						} else if ((-deltaY > thresholdDistance)&&(Math.abs(deltaX) < thresholdDistance)) {
