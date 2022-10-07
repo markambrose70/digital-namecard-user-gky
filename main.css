@@ -52,6 +52,11 @@ img.benefits {
 	width: 45px;
 }
 
+img.icon {
+	height: 10%;
+	width: 10%;
+}
+
 img.align-left {
 	margin-left: unset;
 }
