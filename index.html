@@ -330,6 +330,61 @@
 				});
 			}
 			
+			/* share link as image */
+			/* https://dev.to/ibmix/hands-on-web-share-api-5bb8 , https://benkaiser.github.io/web-share-images/#/image */
+			/*const sharePromise = navigator.share(shareData);
+			
+			// our share button in the markup
+
+			// create share data object
+			const shareData = {
+				  title: 'Web Share API',
+				  text: 'The best way to share your data.',
+				  url: '' // reffers to the current page
+			};*/
+			const shareButton = document.getElementsByClassName('rounded-left');
+			// click event handler is necessary to call navigator.share()
+			shareButton.addEventListener('click', async () => {
+			  	const image = await fetch('assets/namecard-GKY.svg');
+				const blob = await image.blob();
+				const filesArray: File[] = [new File([blob], 'namecard-GKY.svg', { type: "image/svg+xml" })];
+				const shareData = {
+					files: filesArray,
+				};
+				if (navigator.canShare && navigator.canShare(shareData)) {
+					try {
+						await navigator.share(shareData);
+					} catch (err) {
+						alert(`Error: ${err}`);
+					}
+				} else {
+    					alert('File sharing is not supported.');
+				}
+				/*
+				navigator.share(shareData as any).then(() => {
+    					console.log('Shared successfully');
+				})
+				*/
+				///const file = new File([blob], 'image.jpg', { type: 'image/jpeg' });
+				///const filesArray = [file];
+
+				// add it to the shareData
+				///shareData.files = filesArray;
+				
+				/*// does the browser supports the feature?
+				  if(navigator.share) {
+				    try {
+
+					console.log('🥳 Shared via API.');
+				    } catch(error) {
+					console.log(`😢 ${error}`);
+				    }
+				  } else {
+					// you could do a fallback solution here ... 
+					console.log('😢 Your browser does not support the web share api.')
+				  }
+				})*/
+			
 		})();
 		
 		/*document.addEventListener('touchstart', handleTouchStart, false);
