@@ -169,7 +169,7 @@
 						<div class="row">
 							<div class="col">
 								<p class="text-detail">What you get with JOBSteps:</p>
-								 <ul>
+								<ul>
   									<li class="text-detail">A <span class="text-color-blue"><strong>structured</strong></span> approach to digital form creation for a <span class="text-color-blue"><strong>cleaner</strong></span> data capture process.</li>
   									<li class="text-detail"><span class="text-color-blue"><strong>Quality control</strong></span> by delivering accurate and uniform services.</li>
 									<li class="text-detail"><span class="text-color-blue"><strong>Accountability</strong></span> by ensuring nothing gets overlooked.</li>
@@ -344,7 +344,7 @@
 			};*/
 			const shareButton = document.getElementsByClassName('rounded-left');
 			// click event handler is necessary to call navigator.share()
-			shareButton.addEventListener('click', async () => {
+			shareButton.addEventListener('click', async function() {
 			  	const image = await fetch('assets/namecard-GKY.svg');
 				const blob = await image.blob();
 				const filesArray = [new File([blob], 'namecard-GKY.svg', { type: "image/svg+xml" })];
