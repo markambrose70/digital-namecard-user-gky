@@ -335,7 +335,7 @@
 			const shareButton = document.getElementById('share');
 			// click event handler is necessary to call navigator.share()
 			shareButton.addEventListener('click', async () => {
-			  	const image = await fetch('assets/namecard-GKY.svg');
+			  	const image = await fetch('namecard-GKY.svg');
 				const blob = await image.blob();
 				const filesArray = [new File([blob], 'namecard-GKY.svg', { type: "image/svg+xml" })];
 				const shareData = { files: filesArray };
@@ -343,7 +343,7 @@
 					try {
 						await navigator.share(shareData);
 					} catch (err) {
-						alert(`Error: ${err}`);
+						console.log(`Share Error: ${err}`);
 					}
 				} else {
     					alert('File sharing is not supported.');
