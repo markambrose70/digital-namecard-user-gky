@@ -349,7 +349,7 @@
 				const blob = await image.blob();
 				const filesArray: File[] = [new File([blob], 'namecard-GKY.svg', { type: "image/svg+xml" })];
 				const shareData = {
-					files: filesArray,
+					files: filesArray;
 				};
 				if (navigator.canShare && navigator.canShare(shareData)) {
 					try {
