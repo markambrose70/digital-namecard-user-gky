@@ -335,9 +335,9 @@
 			const shareButton = document.getElementById('share');
 			// click event handler is necessary to call navigator.share()
 			shareButton.addEventListener('click', async () => {
-			  	const image = await fetch('namecard-GKY.jpg');
+			  	const image = await fetch('assets/namecard-GKY.jpg');
 				const blob = await image.blob();
-				const filesArray = [new File([blob], 'assets/namecard-GKY.jpg', { type: "image/jpeg" })];
+				const filesArray = [new File([blob], 'namecard-GKY.jpg', { type: "image/jpeg" })];
 				const shareData = { files: filesArray };
 				if (navigator.canShare && navigator.canShare(shareData)) {
 					try {
