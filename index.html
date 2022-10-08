@@ -332,19 +332,9 @@
 			
 			/* share link as image */
 			/* https://dev.to/ibmix/hands-on-web-share-api-5bb8 , https://benkaiser.github.io/web-share-images/#/image */
-			/*const sharePromise = navigator.share(shareData);
-			
-			// our share button in the markup
-
-			// create share data object
-			const shareData = {
-				  title: 'Web Share API',
-				  text: 'The best way to share your data.',
-				  url: '' // reffers to the current page
-			};*/
-			const shareButton = document.getElementsByClassName('rounded-left');
+			const shareButton = document.getElementsByClassName('footer');
 			// click event handler is necessary to call navigator.share()
-			shareButton.addEventListener('click', async function() {
+			shareButton.addEventListener('click', async () => {
 			  	const image = await fetch('assets/namecard-GKY.svg');
 				const blob = await image.blob();
 				const filesArray = [new File([blob], 'namecard-GKY.svg', { type: "image/svg+xml" })];
