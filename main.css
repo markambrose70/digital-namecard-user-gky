@@ -121,6 +121,10 @@ p.big {
 	padding: 0.0rem !important;
 }
 
+.no-overflow {
+	overflow: clip;
+}
+
 .container {
 	margin: 0 auto;
 	position: relative;
