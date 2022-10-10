@@ -200,6 +200,12 @@ p.big {
 	width: 100%;
 }
 
+.sidebar {
+	flex: none;
+	width: 20%;
+	height: 100%;
+}
+
 .name-title-company {
 	height: 100%;
 }
