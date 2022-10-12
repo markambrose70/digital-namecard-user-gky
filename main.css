@@ -137,6 +137,8 @@ p.big {
 	filter: grayscale(80%);
 	height: 100%;
 	width: 100%;
+	z-index: 1;
+	position: relative;
 }
 
 .section-filter:hover {
