@@ -137,13 +137,13 @@ p.big {
 	filter: grayscale(80%);
 	height: 100%;
 	width: 100%;
-	z-index: 1;
 	position: relative;
 }
 
 .section-filter:hover {
 	box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 10px;
 	filter:   none;
+	z-index: 1;
 }
 
 .row {
