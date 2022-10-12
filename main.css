@@ -131,6 +131,12 @@ p.big {
 	margin: 0 auto;
 	position: relative;
 	height: 100%;
+	filter:   grayscale(80%);
+}
+
+.container:hover {
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 10px;
+	filter:   none;
 }
 
 .row {
@@ -306,10 +312,6 @@ p.big {
 
 .banner-smallest {
 	height: 5%;
-}
-
-.outline {
-	box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 10px;
 }
 
 .button {
