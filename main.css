@@ -131,10 +131,13 @@ p.big {
 	margin: 0 auto;
 	position: relative;
 	height: 100%;
+}
+
+.section-filter {
 	filter:   grayscale(80%);
 }
 
-.container:hover {
+.section-filter:hover {
 	box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 10px;
 	filter:   none;
 }
