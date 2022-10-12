@@ -124,7 +124,7 @@ p.big {
 }
 
 .nudge-up {
-	position: relative;
+	position: absolute;
 	transform: translateY(-30%);
 }
 
