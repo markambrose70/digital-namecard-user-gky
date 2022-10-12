@@ -245,10 +245,6 @@ p.big {
 	background-color: white;
 }
 
-.bg-color-beige {
-	background-color: #FFFAF0;
-}
-
 .text-color-blue {
 	color: #2E75B6 !important;
 }
@@ -297,12 +293,16 @@ p.big {
 	cursor: pointer;
 }
 
-.banner-big {
+.banner-top {
+	height: 22%;
+}
+
+.banner-middle {
 	height: 38%;
 }
 
-.banner-medium {
-	height: 22%;
+.banner-bottom {
+	height: 35%;
 }
 
 .banner-small {
