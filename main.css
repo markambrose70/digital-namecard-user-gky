@@ -123,9 +123,9 @@ p.big {
   transform: translateX(-100%) rotateY(-180deg);
 }
 
-.half-up {
+.nudge-up {
 	position: relative;
-	transform: translateY(-50%);
+	transform: translateY(-30%);
 }
 
 .no-padding {
