@@ -259,6 +259,10 @@ p.big {
 	background-color: white;
 }
 
+.bg-color-blue {
+	background-color: #002955;
+}
+
 .text-color-blue {
 	color: #2E75B6 !important;
 }
