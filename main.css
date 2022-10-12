@@ -189,6 +189,11 @@ p.big {
 	width: 40%;
 }
 
+.col.is-4-5 {
+	flex: none;
+	width: 45%;
+}
+
 .col.is-5 {
 	flex: none;
 	width: 50%;
