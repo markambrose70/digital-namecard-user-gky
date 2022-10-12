@@ -367,6 +367,10 @@ p.big {
 	pointer-events: none;
 }
 
+.no-selection {
+	user-select: none;
+}
+
 @media screen and (max-width: 600px) {
   img.profile {
     height: 60%;
