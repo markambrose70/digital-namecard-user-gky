@@ -123,6 +123,11 @@ p.big {
   transform: translateX(-100%) rotateY(-180deg);
 }
 
+.half-up {
+	position: relative;
+	transform: translateY(-50%);
+}
+
 .no-padding {
 	padding: 0.0rem !important;
 }
