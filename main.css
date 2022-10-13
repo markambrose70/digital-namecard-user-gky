@@ -44,8 +44,8 @@ img.profile-pic {
 	width: 100%;
 	object-fit: cover;
 	border-radius: 50%;
-	border: 2px solid white;
-	box-shadow: 0 0 0 2px #002955;
+	border: 3px solid white;
+	box-shadow: 0 0 0 3px #002955;
 }
 
 img.indicator {
@@ -130,7 +130,7 @@ p.big {
 
 .nudge-up {
 	position: absolute;
-	transform: translateY(-30%);
+	transform: translateY(-15%);
 }
 
 .container {
