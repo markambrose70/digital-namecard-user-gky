@@ -45,7 +45,7 @@ img.profile-pic {
 	object-fit: cover;
 	border-radius: 50%;
 	border: 3px solid #F2F2F2;
-	box-shadow: 0 0 0 3px #002955;
+	box-shadow: 0 0 0 4px #002955;
 }
 
 img.indicator {
@@ -244,6 +244,14 @@ p.big {
 	height: 30%;
 }
 
+.banner-profile {
+	height: 20%;
+}
+
+.banner-button {
+	height: 13%;
+}
+
 .primary-info {
 	height: 13%;
 }
@@ -264,8 +272,8 @@ p.big {
 	background-color: #002955;
 }
 
-.text-color-blue {
-	color: #2E75B6 !important;
+.text-color-grey {
+	color: #F2F2F2 !important;
 }
 
 .text-name {
