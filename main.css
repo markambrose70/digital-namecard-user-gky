@@ -319,6 +319,10 @@ p.big {
 	text-align: center;
 }
 
+.left-margin {
+	margin-left: 30%;
+}
+
 .bottom {
 	height: 20%;
 }
