@@ -366,12 +366,8 @@ p.big {
   	border-bottom-right-radius: 70px;
 }
 
-.front-indicator {
-	border-top: 5px solid red;
-}
-
-.back-indicator {
-	border-top: 5px solid red;
+.indicator {
+	border-top: 3px solid silver;
 }
 
 .no-events {
