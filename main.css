@@ -276,6 +276,14 @@ p.big {
 	color: #F2F2F2 !important;
 }
 
+.text-color-dk-grey {
+	color: #BFBFBF !important;
+}
+
+.text-color-blue {
+  color: #2E75B6 !important;
+}
+
 .text-name {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
@@ -296,7 +304,7 @@ p.big {
     font-family: 'Lato', sans-serif;
     /*font-weight: 300;*/
     color: #575757;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .text-align-left {
