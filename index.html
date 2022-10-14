@@ -367,10 +367,10 @@
 				
 			});
 			
-			$(function() {
-			    $("banner-top").addClass("active");
-			    $(".active").mouseover(function() {
-			      $(this).removeClass("active");
+			document.addEventListener("DOMContentLoaded", () => {
+			    $("banner-top").classList.add("active");
+			    document.getElementByClassName("active").pointerover(function() {
+			      this.classList.remove("active");
 			    });
 			});
 			
