@@ -357,7 +357,7 @@ p.big {
 }
 
 .button {
-	/*background-color: #F2F2F2;*/
+	background-color: #EEEEEE;
 	height: 100%;
 	padding-left: 24px;
 	padding-right: 24px;
@@ -384,6 +384,18 @@ p.big {
 	border-top-right-radius: 70px;
   	border-bottom-right-radius: 70px;
 	margin-left: 1px;
+}
+
+.rounded-left-white {
+	border: 2px solid white;
+	border-top-left-radius: 70px;
+  	border-bottom-left-radius: 70px;
+}
+
+.rounded-right-white {
+	border: 2px solid white;
+	border-top-right-radius: 70px;
+  	border-bottom-right-radius: 70px;
 }
 
 .indicator {
