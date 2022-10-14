@@ -146,7 +146,7 @@ p.big {
 	position: relative;
 }
 
-.section-filter:hover {
+.section-filter:hover, section-filter.active {
 	box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 10px;
 	filter:   none;
 	z-index: 1;
