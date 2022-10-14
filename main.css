@@ -370,18 +370,20 @@ p.big {
 }
 
 .rounded-left {
-	border: 3px solid #BFBFBF;
+	border: 2px solid #BFBFBF;
 	border-top-left-radius: 70px;
   	border-bottom-left-radius: 70px;
+	margin-right: 1px;
 }
 
 .rounded-right {
-	/*border: 2px solid white;*/
-	border-top: 3px solid #BFBFBF;
+	border: 2px solid #BFBFBF;
+	/*border-top: 3px solid #BFBFBF;
 	border-right: 3px solid #BFBFBF;
-	border-bottom: 3px solid #BFBFBF;
+	border-bottom: 3px solid #BFBFBF;*/
 	border-top-right-radius: 70px;
   	border-bottom-right-radius: 70px;
+	margin-left: 1px;
 }
 
 .indicator {
