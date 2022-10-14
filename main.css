@@ -264,6 +264,10 @@ p.big {
 	background-color: #F2F2F2;
 }
 
+.bg-color-dk-grey {
+	background-color: #BFBFBF;
+}
+
 .bg-color-white {
 	background-color: white;
 }
@@ -357,7 +361,7 @@ p.big {
 }
 
 .button {
-	background-color: #EEEEEE;
+	/*background-color: #EEEEEE;*/
 	height: 100%;
 	padding-left: 24px;
 	padding-right: 24px;
@@ -398,8 +402,12 @@ p.big {
   	border-bottom-right-radius: 70px;
 }
 
+.indicator-holder {
+	border-top: 2px solid #F2F2F2;
+}
+
 .indicator {
-	border-top: 2px solid #D3D3D3;
+	border-top: 2px solid #276bda;
 }
 
 .no-padding {
