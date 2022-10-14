@@ -368,8 +368,9 @@
 			});
 			
 			document.addEventListener("DOMContentLoaded", () => {
-			    $("banner-top").classList.add("active");
-			    document.getElementByClassName("active").pointerover(function() {
+			    var first = document.getElementByClassName("banner-top")
+			    first.classList.add("active");
+			    first.pointerover(function() {
 			      this.classList.remove("active");
 			    });
 			});
