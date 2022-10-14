@@ -370,14 +370,14 @@ p.big {
 }
 
 .rounded-left {
-	border: 2px solid #002955;
+	border: 2px solid #276bda;
 	border-top-left-radius: 70px;
   	border-bottom-left-radius: 70px;
 	margin-right: 1px;
 }
 
 .rounded-right {
-	border: 2px solid #002955;
+	border: 2px solid #276bda;
 	/*border-top: 3px solid #BFBFBF;
 	border-right: 3px solid #BFBFBF;
 	border-bottom: 3px solid #BFBFBF;*/
