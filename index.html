@@ -134,7 +134,7 @@
 						<div class="row">
 							<div class="col"></div>
 							<div class="col is-4-5 no-padding">
-								<div class="button rounded-left-white">
+								<div class="button rounded-left">
 									<a id="share" class="row">
 										<img class="icon align-left align-right" src="assets/share.svg" alt="Add user" height="10%" width="10%"><span class="button no-padding">Share</span>
 										<img id="namecard" src="assets/namecard-GKY.jpg" style=" display: none; ">
@@ -142,7 +142,7 @@
 								</div>
 							</div>
 							<div class="col is-4-5 no-padding">
-								<div class="button rounded-right-white">
+								<div class="button rounded-right">
 									<a class="row" href="user.vcf">
 										<img class="icon align-left align-right" src="assets/user-add.svg" alt="Add user" height="10%" width="10%"><span class="button no-padding">Save</span>
 									</a>
@@ -367,11 +367,11 @@
 				
 			});
 			
-			var first = document.getElementsByClassName("banner-top");
+			var first = document.querySelector('.banner-top');
 			document.addEventListener("DOMContentLoaded", () => {
-			    first.classList.add("active");
+			    first.classList.add('active');
 			    first.pointerover(function() {
-			      this.classList.remove("active");
+			      this.classList.remove('active');
 			    });
 			});
 			
