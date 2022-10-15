@@ -403,11 +403,11 @@ p.big {
 }
 
 .indicator-other {
-	border-top: 2px solid #276BDA80;
+	border-top: 3px solid #276BDA4D;
 }
 
 .indicator {
-	border-top: 2px solid #276BDA;
+	border-top: 3px solid #276BDA;
 }
 
 .no-padding {
