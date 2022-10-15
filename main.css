@@ -402,12 +402,12 @@ p.big {
   	border-bottom-right-radius: 70px;
 }
 
-.indicator-holder {
-	border-top: 2px solid #F2F2F2;
+.indicator-other {
+	border-top: 2px solid #80276BDA;
 }
 
 .indicator {
-	border-top: 2px solid #276bda;
+	border-top: 2px solid #276BDA;
 }
 
 .no-padding {
