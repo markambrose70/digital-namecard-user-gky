@@ -180,6 +180,11 @@ p.big {
 	width: 10%;
 }
 
+.col.is-1-5 {
+	flex: none;
+	width: 15%;
+}
+
 .col.is-2 {
 	flex: none;
 	width: 20%;
