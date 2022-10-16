@@ -322,8 +322,8 @@
 						    ((-deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) ) {		//swipe left
 							o.classList.toggle('is-flipped'); 
 							c.classList.toggle('no-events'); 
-							if (!isFlipped&&!isRemoved) { f.classList.toggle('active'); }
-							isFlipped = !isFlipped;
+							f.classList.toggle('active');
+							
 						}
 						/*if ((deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
 							if (o.classList.contains('is-flipped')) { o.classList.toggle('is-flipped'); c.classList.toggle('no-events'); }//o.innerHTML = 'swipe right';
@@ -352,8 +352,8 @@
   				footers[i].addEventListener( 'click', function() {
 			 		o.classList.toggle('is-flipped');
 					c.classList.toggle('no-events');
-					if (!isFlipped&&!isRemoved) { f.classList.toggle('active'); }
-					isFlipped = !isFlipped;
+					f.classList.toggle('active');
+				
 				});
 			}
 			
