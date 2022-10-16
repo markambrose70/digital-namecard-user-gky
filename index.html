@@ -285,6 +285,7 @@
 			var start = {};
 			var end = {};
 			var tracking = false;
+			var isFirstTime = true;
 			var thresholdTime = 1000;
 			var thresholdDistance = screen.width > 480 ? 100 : 10;
 			const o = document.querySelector('.card')/*document.getElementsByTagName('output')[0]*/;
@@ -322,6 +323,7 @@
 							o.classList.toggle('is-flipped'); 
 							c.classList.toggle('no-events'); 
 							f.classList.toggle('active');
+							isFirstTime = !isFirstTime;
 						}
 						/*if ((deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
 							if (o.classList.contains('is-flipped')) { o.classList.toggle('is-flipped'); c.classList.toggle('no-events'); }//o.innerHTML = 'swipe right';
@@ -351,14 +353,18 @@
 			 		o.classList.toggle('is-flipped');
 					c.classList.toggle('no-events');
 					f.classList.toggle('active');
+					isFirstTime = !isFirstTime;
 				});
 			}
 			
 			/* remove active class on first section entry */
 			var filters = document.getElementsByClassName('section-filter');
 			for (let j = 0; j < filters.length; j++) {
-  				filters[j].addEventListener('mouseover', (event) => {
-					if (f.classList.contains('active')) { f.classList.remove('active'); }
+  				filters[j].addEventListener('pointerover', (event) => {
+					if (f.classList.contains('active')) { 
+						f.classList.remove('active'); 
+						isFirstTime = false;
+					}
 			  		console.log('Pointer moved in');
 			});
 			}
