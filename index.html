@@ -168,7 +168,7 @@
 			
 			<div class="card__face card__face--back no-selection">
 				<section class="bg-color-white banner-top">
-					<div class="section-filter">
+					<div class="section-filter active">
 						<div class="container">
 							<div class="row">
 								<div class="col sidebar no-padding">
@@ -287,8 +287,9 @@
 			var tracking = false;
 			var thresholdTime = 1000;
 			var thresholdDistance = screen.width > 480 ? 100 : 10;
-			var o = document.querySelector('.card')/*document.getElementsByTagName('output')[0]*/;
-			var c = document.querySelector('.card__face--front');
+			const o = document.querySelector('.card')/*document.getElementsByTagName('output')[0]*/;
+			const c = document.querySelector('.card__face--front');
+			const f = document.querySelector('.banner-top .section-filter');
 			gestureStart = function(e) {
 				/*o.innerHTML = '';*/
 				tracking = true;
@@ -316,11 +317,17 @@
 						// gesture too slow
 						return;
 					} else {
-						if ((deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
-							if (o.classList.contains('is-flipped')) { /*screenLog.innerText = `made it to 1`;*/ o.classList.toggle('is-flipped'); c.classList.toggle('no-events'); }/*o.innerHTML = 'swipe right';*/
+						if ( ((deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) ||		//swipe right
+						    ((-deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) ) {		//swipe left
+							o.classList.toggle('is-flipped'); 
+							c.classList.toggle('no-events'); 
+							f.classList.toggle('active');
+						}
+						/*if ((deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
+							if (o.classList.contains('is-flipped')) { o.classList.toggle('is-flipped'); c.classList.toggle('no-events'); }//o.innerHTML = 'swipe right';
 						} else if ((-deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
-							if (!o.classList.contains('is-flipped')) { /*screenLog.innerText = `made it to 2`;*/ o.classList.toggle('is-flipped'); c.classList.toggle('no-events'); }/*o.innerHTML = 'swipe left';*/
-						}/* else if ((deltaY > thresholdDistance)&&(Math.abs(deltaX) < thresholdDistance)) {
+							if (!o.classList.contains('is-flipped')) { o.classList.toggle('is-flipped'); c.classList.toggle('no-events'); }//o.innerHTML = 'swipe left';
+						} else if ((deltaY > thresholdDistance)&&(Math.abs(deltaX) < thresholdDistance)) {
 							//o.innerHTML = 'swipe down';
 						} else if ((-deltaY > thresholdDistance)&&(Math.abs(deltaX) < thresholdDistance)) {
 							//o.innerHTML = 'swipe up';
@@ -343,8 +350,19 @@
   				footers[i].addEventListener( 'click', function() {
 			 		o.classList.toggle('is-flipped');
 					c.classList.toggle('no-events');
+					f.classList.toggle('active');
 				});
 			}
+			
+			/* remove active class on first section entry */
+			var filters = document.getElementsByClassName('section-filter');
+			for (let j = 0; j < filters.length; j++) {
+  				filters[j].addEventListener('pointerover', (event) => {
+					if (f.classList.contains('active')) { f.classList.remove('active'); }
+			  		console.log('Pointer moved in');
+			});
+			}
+			
 			
 			/* share link as image */
 			/* https://dev.to/ibmix/hands-on-web-share-api-5bb8 , https://benkaiser.github.io/web-share-images/#/image */
@@ -373,7 +391,7 @@
 				
 			});
 			
-			var first = document.querySelector('.banner-top .section-filter');
+			const f = document.querySelector('.banner-top .section-filter');
 			document.addEventListener("DOMContentLoaded", () => {
 			    first.classList.add('active');
 			    first.onpointerover = (event) => {
