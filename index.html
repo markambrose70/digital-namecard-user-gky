@@ -357,7 +357,7 @@
 			/* remove active class on first section entry */
 			var filters = document.getElementsByClassName('section-filter');
 			for (let j = 0; j < filters.length; j++) {
-  				filters[j].addEventListener('pointerover', (event) => {
+  				filters[j].addEventListener('pointerdown', (event) => {
 					if (f.classList.contains('active')) { f.classList.remove('active'); }
 			  		console.log('Pointer moved in');
 			});
