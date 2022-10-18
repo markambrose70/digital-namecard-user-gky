@@ -285,7 +285,7 @@
 			var start = {};
 			var end = {};
 			var tracking = false;
-			var isRemoved, isFlipped = false;
+			var isRemoved = false;
 			var thresholdTime = 1000;
 			var thresholdDistance = screen.width > 480 ? 100 : 10;
 			const o = document.querySelector('.card')/*document.getElementsByTagName('output')[0]*/;
@@ -322,7 +322,7 @@
 						    ((-deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) ) {		//swipe left
 							o.classList.toggle('is-flipped'); 
 							c.classList.toggle('no-events'); 
-							if (!f.classList.contains('active')) { f.classList.toggle('active'); }	
+							if (!isRemoved) { f.classList.toggle('active'); isRemoved = false; }	
 						}
 						/*if ((deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
 							if (o.classList.contains('is-flipped')) { o.classList.toggle('is-flipped'); c.classList.toggle('no-events'); }//o.innerHTML = 'swipe right';
@@ -351,7 +351,7 @@
   				footers[i].addEventListener( 'click', function() {
 			 		o.classList.toggle('is-flipped');
 					c.classList.toggle('no-events');
-					if (!f.classList.contains('active')) { f.classList.toggle('active'); }
+					if (!isRemoved) { f.classList.toggle('active'); isRemoved = false; }
 				});
 			}
 			
@@ -359,7 +359,7 @@
 			var filters = document.getElementsByClassName('section-filter');
 			for (let j = 0; j < filters.length; j++) {
   				filters[j].addEventListener('pointerover', (event) => {
-					if (f.classList.contains('active')) { 
+					if (!isRemoved) { 
 						f.classList.remove('active'); 
 						isRemoved = true;
 					}
