@@ -318,18 +318,28 @@
 						// gesture too slow
 						return;
 					} else {
-						if ( ((deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) ||		//swipe right
+						/*if ( ((deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) ||		//swipe right
 						    ((-deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) ) {		//swipe left
 							o.classList.toggle('is-flipped'); 
 							c.classList.toggle('no-events'); 
 							if (!isRemoved) { f.classList.toggle('active'); }
 							isRemoved = false;
-						}
-						/*if ((deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
-							if (o.classList.contains('is-flipped')) { o.classList.toggle('is-flipped'); c.classList.toggle('no-events'); }//o.innerHTML = 'swipe right';
+						}*/
+						if ((deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
+							if (o.classList.contains('is-flipped')) { 
+								o.classList.toggle('is-flipped'); 
+								c.classList.toggle('no-events'); 
+								if (!isRemoved) { f.classList.toggle('active'); }
+								isRemoved = false;
+							}//o.innerHTML = 'swipe right';
 						} else if ((-deltaX > thresholdDistance)&&(Math.abs(deltaY) < thresholdDistance)) {
-							if (!o.classList.contains('is-flipped')) { o.classList.toggle('is-flipped'); c.classList.toggle('no-events'); }//o.innerHTML = 'swipe left';
-						} else if ((deltaY > thresholdDistance)&&(Math.abs(deltaX) < thresholdDistance)) {
+							if (!o.classList.contains('is-flipped')) { 
+								o.classList.toggle('is-flipped'); 
+								c.classList.toggle('no-events'); 
+								if (!isRemoved) { f.classList.toggle('active'); }
+								isRemoved = false;
+							}//o.innerHTML = 'swipe left';
+						} /*else if ((deltaY > thresholdDistance)&&(Math.abs(deltaX) < thresholdDistance)) {
 							//o.innerHTML = 'swipe down';
 						} else if ((-deltaY > thresholdDistance)&&(Math.abs(deltaX) < thresholdDistance)) {
 							//o.innerHTML = 'swipe up';
