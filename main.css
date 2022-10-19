@@ -336,6 +336,11 @@ p.big {
 	text-align: center;
 }
 
+.mark { 
+  background-color: #2E75B;
+  color: white;
+}
+
 .left-pad {
 	padding-left: 35%;
 }
