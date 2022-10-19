@@ -92,6 +92,7 @@ p.big {
 mark { 
   background-color: #2E75B6;
   color: white;
+	padding: 1px 3px;
 }
 
 .scene {
