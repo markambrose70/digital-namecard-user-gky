@@ -400,6 +400,12 @@ mark {
 	border-left: 1px solid #002955;
 }
 
+.rounded {
+	border: 1px solid #002955;
+	border-top-left-radius: 50px;
+  	border-bottom-left-radius: 50px;
+}
+
 .rounded-left {
 	border: 2px solid #276bda;
 	border-top-left-radius: 70px;
