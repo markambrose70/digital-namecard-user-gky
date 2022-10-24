@@ -459,6 +459,22 @@ mark {
 	overflow: visible;
 }
 
+.crossfade img {
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+}
+
+@keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+
+
 @media screen and (max-width: 600px) {
   img.profile {
     height: 60%;
