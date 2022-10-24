@@ -473,7 +473,9 @@ mark {
     100% {opacity: 0;}
 }
 
-
+#s1 { animation-delay: -6s; }
+#s2 { animation-delay: -4s; }
+#s3 { animation-delay: -2s; }
 
 @media screen and (max-width: 600px) {
   img.profile {
