@@ -410,7 +410,7 @@ p.big {
 	border: 2px solid #BFBFBF;
 	border-top-left-radius: 50px;
   	border-bottom-left-radius: 50px;
-	margin-right: 1px;
+	margin-right: 3px;
 }
 
 .rounded-right {
@@ -420,7 +420,7 @@ p.big {
 	border-bottom: 3px solid #BFBFBF;*/
 	border-top-right-radius: 50px;
   	border-bottom-right-radius: 50px;
-	margin-left: 1px;
+	margin-left: 3px;
 }
 
 .rounded-left-white {
@@ -459,14 +459,18 @@ p.big {
 	overflow: visible;
 }
 
+.crossfade {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .crossfade img {
     animation-name: fade;
     animation-iteration-count: infinite;
     animation-duration: 8s;
     position: absolute;
     top: 0;
-    height: 100%;
-    width: 100%;
+    
     object-fit: cover;
 }
 
@@ -488,6 +492,10 @@ p.big {
     height: 60%;
     width: 60%;
   }
+	.crossfade img {
+	    height: 100%;
+	    width: 100%;
+	}
 }
 
 @media screen and (max-width: 480px) {
@@ -495,4 +503,9 @@ p.big {
     height: 80%;
     width: 80%;
   }
+	
+	.crossfade img {
+	    height: 100%;
+	    width: 100%;
+	}
 }
