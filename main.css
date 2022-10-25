@@ -407,19 +407,19 @@ p.big {
 }
 
 .rounded-left {
-	border: 2px solid #276bda;
-	border-top-left-radius: 70px;
-  	border-bottom-left-radius: 70px;
+	border: 2px solid #BFBFBF;
+	border-top-left-radius: 50px;
+  	border-bottom-left-radius: 50px;
 	margin-right: 1px;
 }
 
 .rounded-right {
-	border: 2px solid #276bda;
+	border: 2px solid #BFBFBF;
 	/*border-top: 3px solid #BFBFBF;
 	border-right: 3px solid #BFBFBF;
 	border-bottom: 3px solid #BFBFBF;*/
-	border-top-right-radius: 70px;
-  	border-bottom-right-radius: 70px;
+	border-top-right-radius: 50px;
+  	border-bottom-right-radius: 50px;
 	margin-left: 1px;
 }
 
@@ -462,10 +462,11 @@ p.big {
 .crossfade img {
     animation-name: fade;
     animation-iteration-count: infinite;
-    animation-duration: 6s;
+    animation-duration: 8s;
     position: absolute;
     top: 0;
     height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
