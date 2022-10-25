@@ -465,8 +465,7 @@ p.big {
     animation-duration: 6s;
     position: absolute;
     top: 0;
-    left: 0;
-    max-width: none;
+    height: 100%;
 }
 
 @keyframes fade {
