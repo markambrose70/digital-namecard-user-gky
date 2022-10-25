@@ -466,6 +466,7 @@ p.big {
     position: absolute;
     top: 0;
     height: 100%;
+    object-fit: cover;
 }
 
 @keyframes fade {
