@@ -459,18 +459,14 @@ p.big {
 	overflow: visible;
 }
 
-.crossfade {
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .crossfade img {
     animation-name: fade;
     animation-iteration-count: infinite;
     animation-duration: 8s;
     position: absolute;
     top: 0;
-    
+    left: 50%;
+    transform: translateX(-50%);
     object-fit: cover;
 }
 
